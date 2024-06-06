@@ -25,6 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            TaskManager()
 
         }
     }
@@ -32,14 +33,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TaskManager(modifier: Modifier = Modifier) {
-    val TheImage = painterResource(R.drawable.ic_task_completed)
+    val theImage = painterResource(R.drawable.ic_task_completed)
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
 
-        Image(painter = TheImage, contentDescription = null)
+        Image(painter = theImage, contentDescription = null)
 
         Text(
             text = stringResource(R.string.all_tasks_completed),
